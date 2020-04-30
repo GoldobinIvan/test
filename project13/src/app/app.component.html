@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>{{ title }}</h1>
+    </div>
+  </div>
+  <form [formGroup]="personForm">
+    <div class="row mt-2">
+      <div class="col-10">
+        <input type="text" class="form-control" formControlName="name" placeholder="Имя" />
+      </div>
+
+      <div class="col-2">
+        <button class="btn btn-secondary" (click)="onDisable()">-</button>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-12">
+        <input type="text" class="form-control" formControlName="surname" placeholder="Фамлия" />
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-12">
+        <input type="text" class="form-control" formControlName="patronymic" placeholder="Отчество" />
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-4">
+        <input type="text" class="form-control" formControlName="seriaP" placeholder="0000" />
+      </div>
+
+      <div class="col-8">
+        <input type="text" class="form-control" formControlName="numberP" placeholder="000000" />
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-12">
+        <input type="text" class="form-control" formControlName="email" placeholder="email" />
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-12">
+        <input type="text" class="form-control" formControlName="phone" placeholder="телефон" />
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-12">
+        <button class="btn btn-primary" [disabled]="personForm.invalid" (click)="onTest()">
+          Сохранить</button>
+      </div>
+    </div>
+  </form>
+</div>
